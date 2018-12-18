@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  get "/rusrails" => "site_controller#rusrails"
+  get "/rusrails", to: redirect("http://rusrails.ru")
 
-  get "site/poem" => "site_controller#poem"
+  get "site/poem", to: "site#poem"
 
-  get "planets/logo" => "planets#logo"
+  get "planets/logo", to: "planets#logo"
 
-  get "planets/about" => "planets#about"
+  get "planets/about", to: "planets#about"
 
   root "planets#logo"
 

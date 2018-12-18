@@ -66,6 +66,7 @@ class PlanetsController < ApplicationController
   end
 
   def logo
+    send_file Rails.root.join('app', 'assets', 'text', 'linux-logo.txt'), disposition: 'inline'
   end
 
   private
